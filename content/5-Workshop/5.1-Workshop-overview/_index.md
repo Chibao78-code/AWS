@@ -1,18 +1,31 @@
----
-title : "Introduction"
-date : 2024-01-01 
-weight : 1 
-chapter : false
-pre : " <b> 5.1. </b> "
----
++++
+title = "Introduction"
+date = 2026-07-16
+weight = 1
+chapter = false
+pre = "<b>5.1. </b>"
++++
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+# SPLITLY WORKSHOP OVERVIEW
 
-#### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
+## Problem statement
 
-![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)
+During trips, shared living, and group activities, different members often pay on behalf of the group. Manual records easily miss expenses, make receipts difficult to reconcile, and require repeated calculations to determine who owes whom. Splitly keeps members, expenses, split rules, balances, and evidence in one place.
+
+## Architecture implemented in this workshop
+
+![Splitly deployment architecture](/images/5-Workshop/Splitly/5.1-Overview/diagram1.png)
+
+The main request flow is:
+
+1. Users access the EC2 public address over HTTP port 80.
+2. **Nginx** serves the React/Vite production build and forwards `/api/` requests to `127.0.0.1:5000`.
+3. The **Node.js/Express** API handles authentication, groups, members, expenses, and settlement logic. **PM2** keeps the process running.
+4. The backend stores application data in **MongoDB Atlas** and uploads receipt images to **Amazon S3** through the EC2 IAM role.
+5. **Amazon CloudWatch** provides logs and metrics. Administrators use **AWS Systems Manager Session Manager**, avoiding a publicly exposed SSH port.
+
+For this lab, frontend and backend share one EC2 instance so the complete flow is easy to deploy and inspect. A future production evolution could host the frontend on S3 and CloudFront and add Route 53, ACM, and AWS WAF. Those services are an extension, not a requirement of the current workshop.
+
+## Expected result
+
+At completion, the EC2 instance serves the Splitly UI, Nginx routes API calls correctly, `splitly-api` is `online`, MongoDB Atlas is reachable, and configured receipt operations can use S3. The validation section tests each layer independently so infrastructure, backend, frontend, and proxy failures can be distinguished.

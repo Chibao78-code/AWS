@@ -1,242 +1,125 @@
----
-title : "Các bước chuẩn bị"
-date : 2024-01-01 
-weight : 2
-chapter : false
-pre : " <b> 5.2. </b> "
----
++++
+title = "Prerequiste"
+date = 2026-08-06
+weight = 2
+chapter = false
+pre = "<b>5.2. </b>"
++++
 
-#### IAM permissions
-Gắn IAM permission policy sau vào tài khoản aws user của bạn để triển khai và dọn dẹp tài nguyên trong workshop này.
-```
+# CHUẨN BỊ MÔI TRƯỜNG
+
+## 1. Thông tin cần có
+
+Trước khi tạo hạ tầng, chuẩn bị:
+
+- Tài khoản AWS và Region thống nhất của nhóm, ví dụ `ap-southeast-1`.
+- Tệp CloudFormation YAML của dự án Splitly.
+- URL repository Git chứa hai thư mục `app` và `backend`.
+- Chuỗi kết nối MongoDB Atlas và database `Splitly`; Network Access của Atlas phải cho phép EC2 kết nối.
+- Gmail App Password và Google Client ID nếu kiểm thử đăng nhập/gửi email.
+- Tên S3 bucket lưu hóa đơn. Tên bucket phải duy nhất trên toàn AWS.
+- Thông tin VNPay Sandbox nếu kiểm thử thanh toán; có thể để trống trong bài thực hành cơ bản.
+
+{{% notice warning %}}
+Không ghi mật khẩu, JWT secret hoặc URI MongoDB thật vào tài liệu và repository. Với môi trường thật, nên lưu bí mật trong AWS Secrets Manager hoặc Systems Manager Parameter Store.
+{{% /notice %}}
+
+## 2. Quyền IAM cho người triển khai
+
+Tài khoản thực hành cần quyền tạo CloudFormation stack, EC2, S3, CloudWatch và IAM role cho EC2. Chính sách sau phản ánh phạm vi của bài lab và sử dụng quyền khá rộng để giảm lỗi trong lớp học:
+
+```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Sid": "VisualEditor0",
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:*",
-                "cloudwatch:*",
-                "ec2:AcceptTransitGatewayPeeringAttachment",
-                "ec2:AcceptTransitGatewayVpcAttachment",
-                "ec2:AllocateAddress",
-                "ec2:AssociateAddress",
-                "ec2:AssociateIamInstanceProfile",
-                "ec2:AssociateRouteTable",
-                "ec2:AssociateSubnetCidrBlock",
-                "ec2:AssociateTransitGatewayRouteTable",
-                "ec2:AssociateVpcCidrBlock",
-                "ec2:AttachInternetGateway",
-                "ec2:AttachNetworkInterface",
-                "ec2:AttachVolume",
-                "ec2:AttachVpnGateway",
-                "ec2:AuthorizeSecurityGroupEgress",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:CreateClientVpnEndpoint",
-                "ec2:CreateClientVpnRoute",
-                "ec2:CreateCustomerGateway",
-                "ec2:CreateDhcpOptions",
-                "ec2:CreateFlowLogs",
-                "ec2:CreateInternetGateway",
-                "ec2:CreateLaunchTemplate",
-                "ec2:CreateNetworkAcl",
-                "ec2:CreateNetworkInterface",
-                "ec2:CreateNetworkInterfacePermission",
-                "ec2:CreateRoute",
-                "ec2:CreateRouteTable",
-                "ec2:CreateSecurityGroup",
-                "ec2:CreateSubnet",
-                "ec2:CreateSubnetCidrReservation",
-                "ec2:CreateTags",
-                "ec2:CreateTransitGateway",
-                "ec2:CreateTransitGatewayPeeringAttachment",
-                "ec2:CreateTransitGatewayPrefixListReference",
-                "ec2:CreateTransitGatewayRoute",
-                "ec2:CreateTransitGatewayRouteTable",
-                "ec2:CreateTransitGatewayVpcAttachment",
-                "ec2:CreateVpc",
-                "ec2:CreateVpcEndpoint",
-                "ec2:CreateVpcEndpointConnectionNotification",
-                "ec2:CreateVpcEndpointServiceConfiguration",
-                "ec2:CreateVpnConnection",
-                "ec2:CreateVpnConnectionRoute",
-                "ec2:CreateVpnGateway",
-                "ec2:DeleteCustomerGateway",
-                "ec2:DeleteFlowLogs",
-                "ec2:DeleteInternetGateway",
-                "ec2:DeleteNetworkInterface",
-                "ec2:DeleteNetworkInterfacePermission",
-                "ec2:DeleteRoute",
-                "ec2:DeleteRouteTable",
-                "ec2:DeleteSecurityGroup",
-                "ec2:DeleteSubnet",
-                "ec2:DeleteSubnetCidrReservation",
-                "ec2:DeleteTags",
-                "ec2:DeleteTransitGateway",
-                "ec2:DeleteTransitGatewayPeeringAttachment",
-                "ec2:DeleteTransitGatewayPrefixListReference",
-                "ec2:DeleteTransitGatewayRoute",
-                "ec2:DeleteTransitGatewayRouteTable",
-                "ec2:DeleteTransitGatewayVpcAttachment",
-                "ec2:DeleteVpc",
-                "ec2:DeleteVpcEndpoints",
-                "ec2:DeleteVpcEndpointServiceConfigurations",
-                "ec2:DeleteVpnConnection",
-                "ec2:DeleteVpnConnectionRoute",
-                "ec2:Describe*",
-                "ec2:DetachInternetGateway",
-                "ec2:DisassociateAddress",
-                "ec2:DisassociateRouteTable",
-                "ec2:GetLaunchTemplateData",
-                "ec2:GetTransitGatewayAttachmentPropagations",
-                "ec2:ModifyInstanceAttribute",
-                "ec2:ModifySecurityGroupRules",
-                "ec2:ModifyTransitGatewayVpcAttachment",
-                "ec2:ModifyVpcAttribute",
-                "ec2:ModifyVpcEndpoint",
-                "ec2:ReleaseAddress",
-                "ec2:ReplaceRoute",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:RunInstances",
-                "ec2:StartInstances",
-                "ec2:StopInstances",
-                "ec2:UpdateSecurityGroupRuleDescriptionsEgress",
-                "ec2:UpdateSecurityGroupRuleDescriptionsIngress",
-                "iam:AddRoleToInstanceProfile",
-                "iam:AttachRolePolicy",
-                "iam:CreateInstanceProfile",
-                "iam:CreatePolicy",
-                "iam:CreateRole",
-                "iam:DeleteInstanceProfile",
-                "iam:DeletePolicy",
-                "iam:DeleteRole",
-                "iam:DeleteRolePolicy",
-                "iam:DetachRolePolicy",
-                "iam:GetInstanceProfile",
-                "iam:GetPolicy",
-                "iam:GetRole",
-                "iam:GetRolePolicy",
-                "iam:ListPolicyVersions",
-                "iam:ListRoles",
-                "iam:PassRole",
-                "iam:PutRolePolicy",
-                "iam:RemoveRoleFromInstanceProfile",
-                "lambda:CreateFunction",
-                "lambda:DeleteFunction",
-                "lambda:DeleteLayerVersion",
-                "lambda:GetFunction",
-                "lambda:GetLayerVersion",
-                "lambda:InvokeFunction",
-                "lambda:PublishLayerVersion",
-                "logs:CreateLogGroup",
-                "logs:DeleteLogGroup",
-                "logs:DescribeLogGroups",
-                "logs:PutRetentionPolicy",
-                "route53:ChangeTagsForResource",
-                "route53:CreateHealthCheck",
-                "route53:CreateHostedZone",
-                "route53:CreateTrafficPolicy",
-                "route53:DeleteHostedZone",
-                "route53:DisassociateVPCFromHostedZone",
-                "route53:GetHostedZone",
-                "route53:ListHostedZones",
-                "route53domains:ListDomains",
-                "route53domains:ListOperations",
-                "route53domains:ListTagsForDomain",
-                "route53resolver:AssociateResolverEndpointIpAddress",
-                "route53resolver:AssociateResolverRule",
-                "route53resolver:CreateResolverEndpoint",
-                "route53resolver:CreateResolverRule",
-                "route53resolver:DeleteResolverEndpoint",
-                "route53resolver:DeleteResolverRule",
-                "route53resolver:DisassociateResolverEndpointIpAddress",
-                "route53resolver:DisassociateResolverRule",
-                "route53resolver:GetResolverEndpoint",
-                "route53resolver:GetResolverRule",
-                "route53resolver:ListResolverEndpointIpAddresses",
-                "route53resolver:ListResolverEndpoints",
-                "route53resolver:ListResolverRuleAssociations",
-                "route53resolver:ListResolverRules",
-                "route53resolver:ListTagsForResource",
-                "route53resolver:UpdateResolverEndpoint",
-                "route53resolver:UpdateResolverRule",
-                "s3:AbortMultipartUpload",
-                "s3:CreateBucket",
-                "s3:DeleteBucket",
-                "s3:DeleteObject",
-                "s3:GetAccountPublicAccessBlock",
-                "s3:GetBucketAcl",
-                "s3:GetBucketOwnershipControls",
-                "s3:GetBucketPolicy",
-                "s3:GetBucketPolicyStatus",
-                "s3:GetBucketPublicAccessBlock",
-                "s3:GetObject",
-                "s3:GetObjectVersion",
-                "s3:GetBucketVersioning",
-                "s3:ListAccessPoints",
-                "s3:ListAccessPointsForObjectLambda",
-                "s3:ListAllMyBuckets",
-                "s3:ListBucket",
-                "s3:ListBucketMultipartUploads",
-                "s3:ListBucketVersions",
-                "s3:ListJobs",
-                "s3:ListMultipartUploadParts",
-                "s3:ListMultiRegionAccessPoints",
-                "s3:ListStorageLensConfigurations",
-                "s3:PutAccountPublicAccessBlock",
-                "s3:PutBucketAcl",
-                "s3:PutBucketPolicy",
-                "s3:PutBucketPublicAccessBlock",
-                "s3:PutObject",
-                "secretsmanager:CreateSecret",
-                "secretsmanager:DeleteSecret",
-                "secretsmanager:DescribeSecret",
-                "secretsmanager:GetSecretValue",
-                "secretsmanager:ListSecrets",
-                "secretsmanager:ListSecretVersionIds",
-                "secretsmanager:PutResourcePolicy",
-                "secretsmanager:TagResource",
-                "secretsmanager:UpdateSecret",
-                "sns:ListTopics",
-                "ssm:DescribeInstanceProperties",
-                "ssm:DescribeSessions",
-                "ssm:GetConnectionStatus",
-                "ssm:GetParameters",
-                "ssm:ListAssociations",
-                "ssm:ResumeSession",
-                "ssm:StartSession",
-                "ssm:TerminateSession"
-            ],
-            "Resource": "*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:*",
+        "ec2:*",
+        "s3:*",
+        "cloudwatch:*",
+        "logs:*",
+        "sns:*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:CreateRole",
+        "iam:DeleteRole",
+        "iam:GetRole",
+        "iam:CreateInstanceProfile",
+        "iam:DeleteInstanceProfile",
+        "iam:AddRoleToInstanceProfile",
+        "iam:RemoveRoleFromInstanceProfile",
+        "iam:AttachRolePolicy",
+        "iam:DetachRolePolicy",
+        "iam:PutRolePolicy",
+        "iam:DeleteRolePolicy",
+        "iam:TagRole"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iam:PassRole",
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "iam:PassedToService": "ec2.amazonaws.com"
         }
-    ]
+      }
+    }
+  ]
 }
-
 ```
 
-#### Khởi tạo tài nguyên bằng CloudFormation
+<!-- {{% notice note %}}
+Chính sách trên chỉ phù hợp với tài khoản lab. Trong môi trường thật, hãy giới hạn `Action` và `Resource` theo nguyên tắc đặc quyền tối thiểu, đồng thời dùng role tạm thời thay cho access key dài hạn.
+{{% /notice %}} -->
 
-Trong lab này, chúng ta sẽ dùng N.Virginia region (us-east-1).
+## 3. Tạo hạ tầng bằng CloudFormation
 
-Để chuẩn bị cho môi trường làm workshop, chúng ta deploy CloudFormation template sau (click link): [PrivateLinkWorkshop ](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.us-east-1.amazonaws.com/reinvent-endpoints-builders-session/Nested.yaml&stackName=PLCloudSetup). Để nguyên các lựa chọn mặc định.
+1. Mở **AWS Management Console**, tìm **CloudFormation** và chọn **Create stack → With new resources (standard)**.
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack1.png)
+   ![Mở CloudFormation](/images/5-Workshop/Splitly/5.2-Prerequisite/1.png)
 
-+ Lựa chọn 2 mục acknowledgement 
-+ Chọn Create stack
+2. Chọn **Upload a template file**, tải tệp YAML của nhóm lên rồi chọn **Next**.
 
-![create stack](/images/5-Workshop/5.2-Prerequisite/create-stack2.png)
+   ![Tải CloudFormation template](/images/5-Workshop/Splitly/5.2-Prerequisite/2.png)
 
-Quá trình triển khai CloudFormation cần khoảng 15 phút để hoàn thành.
+3. Đặt tên stack dễ nhận biết, chẳng hạn `splitly-workshop`, và nhập các parameter theo template: VPC CIDR, subnet, instance type, bucket name hoặc key pair nếu template yêu cầu.
 
-![complete](/images/5-Workshop/5.2-Prerequisite/complete.png)
+   ![Cấu hình stack](/images/5-Workshop/Splitly/5.2-Prerequisite/3.png)
 
-+ 2 VPCs đã được tạo
+4. Kiểm tra cấu hình stack, thẻ tài nguyên và quyền IAM.
 
-![vpcs](/images/5-Workshop/5.2-Prerequisite/vpcs.png)
+   ![Kiểm tra cấu hình](/images/5-Workshop/Splitly/5.2-Prerequisite/4.png)
 
-+ 3 EC2s đã được tạo
+5. Đánh dấu xác nhận CloudFormation có thể tạo IAM resources, sau đó chọn **Submit**.
 
-![EC2](/images/5-Workshop/5.2-Prerequisite/ec2.png)
+   ![Xác nhận quyền IAM](/images/5-Workshop/Splitly/5.2-Prerequisite/5.png)
+
+6. Theo dõi tab **Events** đến khi stack chuyển sang `CREATE_COMPLETE`. Nếu thất bại, mở event đầu tiên có trạng thái `CREATE_FAILED` để xem nguyên nhân gốc.
+
+   ![Theo dõi quá trình tạo](/images/5-Workshop/Splitly/5.2-Prerequisite/6.png)
+
+7. Kiểm tra tab **Resources** và **Outputs** để lấy EC2 Instance ID, Public IP, tên bucket và các giá trị đầu ra khác.
+
+   ![Kiểm tra tài nguyên](/images/5-Workshop/Splitly/5.2-Prerequisite/7.png)
+
+   ![Kiểm tra output](/images/5-Workshop/Splitly/5.2-Prerequisite/8.png)
+
+## 4. Kiểm tra trước khi triển khai mã nguồn
+
+- EC2 có trạng thái `Running` và vượt qua toàn bộ status checks.
+- Instance xuất hiện trong **Systems Manager → Fleet Manager/Managed nodes** hoặc có thể chọn **Session Manager** từ màn hình Connect.
+- Security Group cho phép HTTP cổng 80 từ địa chỉ cần kiểm thử; không cần mở cổng 5000 ra Internet vì Nginx gọi backend nội bộ.
+- IAM role gắn với EC2 có quyền cần thiết với đúng S3 bucket và CloudWatch.
+- MongoDB Atlas cho phép kết nối từ địa chỉ mạng của EC2.
+
+![Kiểm tra EC2](/images/5-Workshop/Splitly/5.2-Prerequisite/10.png)
+
+![Kiểm tra Session Manager](/images/5-Workshop/Splitly/5.2-Prerequisite/11.png)

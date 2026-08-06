@@ -1,59 +1,31 @@
 ---
-title: "Worklog Tuần 4"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc tuần 4"
+date: 2026-06-08
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thành giai đoạn nghiên cứu trước dự án về storage, database, identity và monitoring trên AWS.
+* So sánh lựa chọn dịch vụ cho web application có dữ liệu nghiệp vụ và file người dùng tải lên.
+* Chuẩn bị danh sách vấn đề kiến trúc trước khi bắt đầu phát triển Splitly.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc thực hiện trong tuần:
 
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ Hai | Nghiên cứu S3 object, storage class, versioning, lifecycle rule, bucket policy và Block Public Access. | 08/06/2026 | 08/06/2026 | <https://000057.awsstudygroup.com/> <br> <https://000069.awsstudygroup.com/> |
+| Thứ Ba | So sánh cơ sở dữ liệu quan hệ và document; xem xét trường hợp dùng Amazon RDS, DynamoDB và MongoDB Atlas. | 09/06/2026 | 09/06/2026 | <https://000005.awsstudygroup.com/> <br> <https://000060.awsstudygroup.com/> |
+| Thứ Tư | Nghiên cứu cách IAM đánh giá policy, least privilege, EC2 role, KMS và lựa chọn quản lý secret. | 10/06/2026 | 10/06/2026 | <https://000044.awsstudygroup.com/> <br> <https://000033.awsstudygroup.com/> <br> <https://000096.awsstudygroup.com/> |
+| Thứ Năm | Tìm hiểu metric/log CloudWatch, cảnh báo SNS, AWS Budgets, tagging, backup và khôi phục. | 11/06/2026 | 11/06/2026 | <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> <br> <https://000013.awsstudygroup.com/> |
+| Thứ Sáu | Tổng hợp các vấn đề frontend, backend, database, storage, bảo mật, giám sát và chi phí của web application trên cloud. | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
-### Kết quả đạt được tuần 4:
+### Kết quả đạt được trong tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hiểu lý do file upload và dữ liệu nghiệp vụ cần các loại storage phù hợp với mẫu truy cập khác nhau.
+* Biết kết hợp IAM role, bucket policy và Block Public Access thay vì nhúng credential.
+* So sánh lựa chọn database và điểm đánh đổi trong vận hành.
+* Liên kết monitoring, alerting, backup và budget control với hoạt động của ứng dụng.
+* Hoàn tất giai đoạn nghiên cứu và sẵn sàng bắt đầu phát triển Splitly ngày 15/06/2026.

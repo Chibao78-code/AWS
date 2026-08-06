@@ -1,126 +1,106 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-08-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+# SATURDAY MEETUP REPORT
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+## 1. Event overview
 
-### Event Objectives
+Saturday Meetup combined technical learning, product-development experience, and personal-growth skills. The sessions covered safe and cost-conscious ways to begin learning AWS, a Hackathon product journey, the challenges of maintaining a real application, and the role of confidence in continuous learning.
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+The most valuable aspect was that the speakers used real experience rather than isolated theory. The event connected technology learning, prototyping, teamwork, and production operations—the same stages that the Splitly project is currently going through.
 
-### Speakers
+## 2. Event objectives
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- Help beginners learn and practice AWS while controlling cost.
+- Introduce guided learning environments and local AWS service emulation.
+- Explain how a Hackathon team turns an idea into a product under time constraints.
+- Share lessons from deploying, operating, and maintaining a real project.
+- Encourage learners to accept challenges and build confidence through practice.
 
-### Key Highlights
+## 3. Speakers
 
-#### Identifying the drawbacks of legacy application architecture
+- **Huynh Thai Linh**
+- **Huynh An Khuong**
+- **Mai Quoc Anh**
+- **Nguyen Tran Minh Quan**
+- **Nguyen Thi Quynh Nhu**
+- **Nghia Tran**
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+## 4. Main sessions
 
-#### Transitioning to modern application architecture – Microservices
+### 4.1 Learning AWS effectively without unexpected cost
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+Huynh Thai Linh began with concerns shared by many AWS beginners: exceeding a budget, forgetting to delete lab resources, or avoiding experimentation because the resulting charges are unclear. The answer is not to stop practicing, but to choose an appropriate learning environment and develop disciplined resource-management habits.
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+Two approaches were introduced:
 
-#### Domain-Driven Design (DDD)
+- **AWS Cloud Quest:** a task-based learning environment that combines guided labs with gamification. It provides a structured path before learners build independent infrastructure.
+- **Floci:** a local emulator for selected AWS services that can be used to test application logic and integrations before deploying to a real AWS account.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+Compared with LocalStack, Floci was discussed in terms of speed, resource consumption, and a favorable usage model for some scenarios. Nevertheless, emulators cover only part of the AWS service catalog, may return mock data, and cannot fully reproduce IAM, networking, quotas, or production behavior. They are useful during early development but do not replace final testing on AWS.
 
-#### Event-Driven Architecture
+The practical lesson is to combine several controls: use emulation where appropriate, configure budgets and alerts, tag resources, and follow a cleanup checklist after every lab.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+### 4.2 Hackathon journey and the SynthHunter project
 
-#### Compute Evolution
+Huynh An Khuong, Mai Quoc Anh, and Nguyen Tran Minh Quan shared their Hackathon journey and the development of **SynthHunter**. Their story covered the compressed product lifecycle: selecting a problem, shaping an idea, agreeing on scope, assigning work, designing the architecture, and completing a demonstrable product within a limited period.
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+The architecture and collaboration discussion showed that a good idea must still be translated into prioritized tasks. A Hackathon team cannot implement every possible feature; success depends on identifying the core value, producing one complete end-to-end flow, and addressing critical risks early.
 
-#### Amazon Q Developer
+The session also emphasized communication and time management. Responsibilities should be clear, but the team must integrate frequently because independently completed components do not guarantee that the final product works as a whole.
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+### 4.3 Building confidence in learning
 
-### Key Takeaways
+Nguyen Thi Quynh Nhu discussed how self-doubt can cause learners to miss opportunities, avoid new challenges, and stop when difficulty appears. Common causes include fear of failure, fear of judgment, and excessive focus on the final outcome instead of progress.
 
-#### Design Mindset
+The 5P Rule was introduced as a practical framework for gradually overcoming fear. Other suggestions included starting with small goals, recognizing daily achievements, maintaining a learning mindset, and choosing progress over perfection.
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+The central message was that confidence does not mean always knowing the answer. It develops when a learner takes action, observes the result, receives feedback, and continues to improve.
 
-#### Technical Architecture
+### 4.4 Real-world development experience from TuviDaiviet
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+Nghia Tran shared lessons from building and maintaining **TuviDaiviet**. Unlike a short-lived demonstration, a real product must handle technical defects, operational requirements, user feedback, and continuous improvement.
 
-#### Modernization Strategy
+The challenges and opportunities described in this session demonstrated that development does not end when a feature is coded. A team must also deploy, monitor, troubleshoot, maintain, and feed real user feedback back into the product plan.
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+## 5. Knowledge and skills gained
 
-### Applying to Work
+### Technical knowledge
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- Learned how AWS Cloud Quest, local emulation, and a real AWS account can serve different learning stages.
+- Understood emulator limitations and why IAM, networking, and data flows must be verified on AWS.
+- Recognized that cost management begins with budgets, alerts, tags, and resource-cleanup procedures.
+- Gained insight into selecting a minimum architecture for a time-limited Hackathon product.
+- Understood that deployment, monitoring, and maintenance belong to the product lifecycle rather than being separate post-development tasks.
 
-### Event Experience
+### Skills and mindset
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+- Define product scope around core value instead of attempting every idea.
+- Break work into clear responsibilities and integrate results frequently.
+- Manage time while working under a deadline.
+- Treat failures and feedback as information for improving the product.
+- Build confidence through small achievements and continuous practice.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+## 6. Application to the Splitly project
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+The meetup lessons can be applied directly to Splitly:
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
+1. **AWS cost control:** configure AWS Budgets, monitor EC2/public IPv4 usage, and follow a CloudFormation cleanup checklist after labs.
+2. **Pre-deployment testing:** selected S3 behavior may be emulated locally, but IAM Roles, bucket policies, and presigned URLs must be validated on AWS.
+3. **MVP prioritization:** stabilize sign-in, groups, expenses, balances, settlements, and receipts before adding secondary features.
+4. **Clear ownership:** divide frontend, backend, data, AWS, and documentation tasks while defining frequent integration points.
+5. **Product operations:** use PM2 and CloudWatch for failure visibility, document deployment/recovery, and treat user feedback as input to the next version.
+6. **Experimental mindset:** release small changes, validate them with evidence, and adjust instead of waiting for a perfect version.
 
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
+## 7. Reflection
 
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
+The event showed that effective technology learning requires three elements at the same time: an appropriate practice environment, collaboration that turns knowledge into a product, and the resilience to learn from mistakes. The AWS session offered safer practice options; SynthHunter demonstrated the importance of scope and teamwork; the confidence session emphasized action and progress; and TuviDaiviet provided a realistic view of responsibility after release.
 
-#### Some event photos
-*Add your event photos here*  
+![Photo from Event 1](/images/4-Event/Splitly/event-1-pic.jpg)
 
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> My main takeaway is that a strong product is not measured only by its feature count. It also depends on cost control, team coordination, reliable operations, and continuous improvement from real feedback.

@@ -1,59 +1,31 @@
 ---
-title: "Worklog Tuần 8"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc tuần 8"
+date: 2026-07-06
+weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Mở rộng Splitly với thông báo, khiếu nại và các tích hợp tùy chọn.
+* Cải thiện validation, phân quyền và tổ chức module.
+* Kiểm thử ứng dụng trước khi thiết kế phương án triển khai AWS.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc thực hiện trong tuần:
 
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ Hai | Thiết kế tùy chọn thông báo và inbox cho hoạt động nhóm, khoản chi và settlement. | 06/07/2026 | 06/07/2026 | <https://expressjs.com/en/guide/routing.html> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Ba | Bổ sung xử lý trạng thái thông báo và xem xét nhắc settlement định kỳ hoặc theo yêu cầu. | 07/07/2026 | 07/07/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Tư | Phát triển luồng gửi khiếu nại và xử lý của quản trị viên kèm kiểm tra dữ liệu, quyền truy cập. | 08/07/2026 | 08/07/2026 | <https://expressjs.com/en/guide/using-middleware.html> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Năm | Rà soát ranh giới cấu hình Gmail/VNPay Sandbox và ngăn secret đi vào client code hoặc Git. | 09/07/2026 | 09/07/2026 | <https://support.google.com/accounts/answer/185833> <br> <https://sandbox.vnpayment.vn/apis/docs/> <br> <https://000096.awsstudygroup.com/> |
+| Thứ Sáu | Kiểm thử xác thực, nhóm, khoản chi, settlement, thông báo và khiếu nại; ghi nhận yêu cầu triển khai. | 10/07/2026 | 10/07/2026 | [../../5-workshop/](../../5-workshop/) <br> [../../2-proposal/](../../2-proposal/) |
 
-### Kết quả đạt được tuần 8:
+### Kết quả đạt được trong tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Bổ sung mô hình notification và preference có cấu trúc.
+* Hoàn thành luồng khiếu nại cơ bản giữa người dùng và quản trị viên.
+* Cải thiện tách module, validation và kiểm tra quyền.
+* Ghi nhận ranh giới an toàn cho thông tin xác thực của dịch vụ ngoài.
+* Tạo phiên bản ứng dụng ổn định để bắt đầu thiết kế kiến trúc AWS.

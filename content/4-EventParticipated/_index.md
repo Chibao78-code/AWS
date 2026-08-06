@@ -1,44 +1,31 @@
 ---
 title: "Events Participated"
-date: 2024-01-01
+date: 2026-08-06
 weight: 4
 chapter: false
 pre: " <b> 4. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** for your report, including this warning.
-{{% /notice %}}
+# EVENTS PARTICIPATED
 
-> In this section, you should list and describe in detail the events you have participated in during your internship or work experience.  
-> 
-> Each event should be presented in the format Event 1, Event 2, Event 3…, along with the following details:
-> * Event name
-> * Date and time
-> * Location (if applicable)
-> * Your role in the event (attendee, event support, speaker, etc.)
-> * A brief description of the event’s content and main activities
-> * Outcomes or value gained (lessons learned, new skills, contribution to the team/project)
-> * This listing helps demonstrate your actual participation as well as the soft skills and experience you have gained from each event.
+During my studies and project work, I attended three events covering AWS, product development, DevOps, AI, and career skills. Each report focuses on the knowledge gained, relevant technical trade-offs, and appropriate applications to Splitly.
 
-During my internship, I participated in two events. Each one was a memorable experience that provided new, interesting, and useful knowledge, along with gifts and wonderful moments.
+## [Event 1 – Saturday Meetup](4.1-Event1/)
 
-### [Event 1](4.1-Event1/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
+- **Role:** Attendee.
+- **Main topics:** cost-conscious AWS learning with Cloud Quest and Floci; the SynthHunter Hackathon journey; building confidence; and lessons from operating TuviDaiviet.
+- **Value gained:** MVP prioritization, cost control, team coordination, and continuous product improvement from feedback.
 
-&emsp;**Date & Time:** 09:00, August 13, 2025  
+## [Event 2 – AWS, DevOps, AI, and Security Meetup](4.2-Event2/)
 
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
+- **Role:** Attendee.
+- **Main topics:** multiplayer systems on AWS, Docker, GraphRAG with Bedrock/Neptune, ML-based NIDS, and a Helpdesk-to-Cloud/DevOps career path.
+- **Value gained:** requirement-driven technology selection, defense in depth, and repeatable deployment practices.
 
-&emsp;**Role:** Attendee  
+## [Event 3 – Agent Forge: Deepdive Day 1](4.3-Event3/)
 
----
-
-### [Event 2](4.2-Event2/)  
-&emsp;**Event Name:** GenAI-powered App-DB Modernization workshop  
-
-&emsp;**Date & Time:** 09:00, August 13, 2025  
-
-&emsp;**Location:** 26th Floor, Bitexco Tower, 02 Hai Trieu Street, Saigon Ward, Ho Chi Minh City  
-
-&emsp;**Role:** Attendee  
+- **Time:** 09:00–12:00, Saturday, August 1, 2026 (GMT+7).
+- **Location:** Bitexco Financial Tower, Ho Chi Minh City.
+- **Role:** Workshop attendee.
+- **Main topics:** Amazon Bedrock AgentCore foundations, Runtime, Gateway, Identity, and a lab covering agent deployment, tool/Knowledge Base integration, and a Cognito-authenticated Web UI.
+- **Value gained:** an end-to-end view of deploying an authenticated AI agent with tools and knowledge sources on AWS.

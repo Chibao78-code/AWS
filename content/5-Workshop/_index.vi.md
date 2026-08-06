@@ -1,33 +1,31 @@
----
-title: "Workshop"
-date: 2024-01-01
-weight: 5
-chapter: false
-pre: " <b> 5. </b> "
----
++++
+title = "Workshop"
+date = 2026-07-16
+weight = 5
+chapter = false
+pre = "<b>5. </b>"
++++
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# TRIỂN KHAI ỨNG DỤNG SPLITLY TRÊN AWS
 
+Workshop này trình bày toàn bộ quá trình đưa **Splitly** — ứng dụng quản lý và chia sẻ chi phí nhóm — lên AWS. Hạ tầng nền tảng được khởi tạo bằng AWS CloudFormation; mã nguồn frontend và backend được triển khai trên Amazon EC2; Amazon S3 lưu ảnh hóa đơn; Amazon CloudWatch hỗ trợ theo dõi hệ thống.
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+Sau khi hoàn thành, bạn có thể:
 
-#### Tổng quan
+- Hiểu luồng xử lý từ trình duyệt đến frontend, API và các dịch vụ dữ liệu.
+- Tạo nhất quán các tài nguyên mạng, bảo mật và máy chủ bằng CloudFormation.
+- Cấu hình biến môi trường mà không đưa khóa bí mật vào mã nguồn.
+- Build React/Vite, vận hành Node.js/Express bằng PM2 và cấu hình Nginx reverse proxy.
+- Kiểm tra từng lớp của hệ thống, xử lý lỗi phổ biến và dọn dẹp tài nguyên sau thực hành.
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+Workshop gồm các phần:
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
+1. [Tổng quan workshop](5.1-Workshop-overview/)
+2. [Chuẩn bị môi trường](5.2-Prerequiste/)
+3. [Triển khai mã nguồn và web server](5.3-DeployCode-WebServer/)
+4. [Kiểm thử hệ thống](5.4-Test/)
+5. [Dọn dẹp tài nguyên](5.5-Cleanup/)
 
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
-
-#### Nội dung
-
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+<!-- {{% notice warning %}}
+Các tên tài nguyên, URL repository, địa chỉ IP, chuỗi kết nối và thông tin xác thực trong hướng dẫn chỉ là chỗ giữ chỗ. Hãy thay bằng giá trị của nhóm Splitly và tuyệt đối không commit bí mật lên Git.
+{{% /notice %}} -->

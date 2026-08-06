@@ -1,59 +1,31 @@
 ---
-title: "Worklog Tuần 5"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc tuần 5"
+date: 2026-06-15
+weight: 5
 chapter: false
 pre: " <b> 1.5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
-
 
 ### Mục tiêu tuần 5:
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Bắt đầu dự án Splitly và xác định phạm vi phát triển đầu tiên.
+* Phân tích người dùng, quy trình chi tiêu nhóm, quy tắc chia tiền và quan hệ dữ liệu.
+* Xây dựng nền móng frontend, backend, database và quy trình Git.
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Các công việc thực hiện trong tuần:
 
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | --- | --- | --- | --- |
+| Thứ Hai | Phân tích bài toán chi tiêu chung, xác định vai trò thành viên/quản trị viên và chức năng tối thiểu. | 15/06/2026 | 15/06/2026 | [../../2-proposal/](../../2-proposal/) |
+| Thứ Ba | Thiết kế use case cho đăng ký, nhóm, thành viên, khoản chi, số dư, settlement, biên lai và thông báo. | 16/06/2026 | 16/06/2026 | [../../2-proposal/](../../2-proposal/) |
+| Thứ Tư | Rà soát React/TypeScript/Vite, Node.js/Express/TypeScript và MongoDB Atlas; tổ chức cấu trúc ứng dụng. | 17/06/2026 | 17/06/2026 | <https://react.dev/learn> <br> <https://vite.dev/guide/> <br> <https://expressjs.com/en/guide/routing.html> <br> <https://www.mongodb.com/docs/atlas/> |
+| Thứ Năm | Thiết kế collection và quan hệ MongoDB ban đầu cho user, group, expense và settlement. | 18/06/2026 | 18/06/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Sáu | Thiết lập quy trình repository, quy ước file môi trường, phân chia công việc và kế hoạch phát triển xuyên suốt. | 19/06/2026 | 19/06/2026 | <https://git-scm.com/docs> <br> [../../2-proposal/](../../2-proposal/) |
 
-### Kết quả đạt được tuần 5:
+### Kết quả đạt được trong tuần 5:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Bắt đầu phát triển Splitly ngày 15/06/2026 với bài toán và phạm vi rõ ràng.
+* Xác định người dùng, luồng nghiệp vụ và tiêu chí nghiệm thu chính.
+* Lựa chọn stack React, Express, TypeScript và MongoDB Atlas phù hợp.
+* Chuẩn bị mô hình dữ liệu và cấu trúc dự án ban đầu.
+* Thống nhất nguyên tắc branch, review, biến môi trường và bảo vệ secret.
