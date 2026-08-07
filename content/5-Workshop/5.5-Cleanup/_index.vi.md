@@ -1,5 +1,5 @@
 +++
-title = "Clean up"
+title = "Dọn dẹp tài nguyên"
 date = 2026-07-16
 weight = 5
 chapter = false

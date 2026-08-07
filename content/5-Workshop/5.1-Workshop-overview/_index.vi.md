@@ -1,5 +1,5 @@
 +++
-title = "Introduction"
+title = "Giới thiệu"
 date = 2026-08-06
 weight = 1
 chapter = false

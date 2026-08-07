@@ -1,5 +1,5 @@
 +++
-title = "Prerequiste"
+title = "Chuẩn bị"
 date = 2026-08-06
 weight = 2
 chapter = false
