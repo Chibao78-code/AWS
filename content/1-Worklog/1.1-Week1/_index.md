@@ -16,11 +16,11 @@ pre: " <b> 1.1. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | --- | --- | --- | --- |
-| Monday | Joined the program, reviewed internship requirements, and organized the twelve-week learning plan. | 18/05/2026 | 18/05/2026 | <https://youtu.be/AQlsd0nWdZk?si=QmmvhYeTisGPtctd> |
-| Tuesday | Studied cloud concepts, AWS Regions, Availability Zones, edge locations, and major service categories. | 19/05/2026 | 19/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| Wednesday | Reviewed AWS account creation, enabled MFA, and learned IAM users, groups, roles, and policies. | 20/05/2026 | 20/05/2026 | <https://000001.awsstudygroup.com/> <br> <https://000002.awsstudygroup.com/> |
-| Thursday | Installed and configured AWS CLI, selected a default Region, and practiced basic commands without exposing credentials. | 21/05/2026 | 21/05/2026 | <https://000011.awsstudygroup.com/> |
-| Friday | Studied AWS Budgets, Cost Explorer, Free Tier limits, support plans, and resource-cleanup practices. | 22/05/2026 | 22/05/2026 | <https://000007.awsstudygroup.com/> <br> <https://000009.awsstudygroup.com/> |
+| Monday | Joined the program and read through the internship requirements.<br>Watched the orientation video, took notes on grading criteria.<br>Sketched a rough 12-week plan on paper first, then typed it up. | 18/05/2026 | 18/05/2026 | <https://youtu.be/AQlsd0nWdZk?si=QmmvhYeTisGPtctd> |
+| Tuesday | Read about cloud concepts, Regions, AZs, edge locations.<br>Got confused at first between Region and AZ, re-read the doc twice.<br>Wrote down which service categories seem relevant to the project later. | 19/05/2026 | 19/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Wednesday | Went through account creation steps and turned on MFA on my phone.<br>Created an IAM user instead of using root, attached a basic policy.<br>Tried inline policy vs group policy just to see the difference. | 20/05/2026 | 20/05/2026 | <https://000001.awsstudygroup.com/> <br> <https://000002.awsstudygroup.com/> |
+| Thursday | Installed AWS CLI, picked a default Region (ap-southeast-1).<br>Set up a named profile so I don't hardcode keys anywhere.<br>Ran `aws sts get-caller-identity` to check it's working, then listed some buckets. | 21/05/2026 | 21/05/2026 | <https://000011.awsstudygroup.com/> |
+| Friday | Read about Budgets, Cost Explorer, Free Tier limits.<br>Set a budget alert at a small threshold just to test it works.<br>Checked Free Tier usage so far, nothing close to the limit yet. | 22/05/2026 | 22/05/2026 | <https://000007.awsstudygroup.com/> <br> <https://000009.awsstudygroup.com/> |
 
 ### Week 1 Achievements:
 

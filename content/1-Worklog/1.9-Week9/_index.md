@@ -16,11 +16,11 @@ pre: " <b> 1.9. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | --- | --- | --- | --- |
-| Monday | Mapped the browser, React/Vite, Nginx, Node.js/Express, MongoDB Atlas, and receipt-data flows. | 13/07/2026 | 13/07/2026 | [../../2-proposal/](../../2-proposal/) <br> <https://000112.awsstudygroup.com/> |
-| Tuesday | Designed a VPC, public subnet, Internet Gateway, Security Group, EC2, and stable public-address model. | 14/07/2026 | 14/07/2026 | <https://000003.awsstudygroup.com/> <br> <https://000004.awsstudygroup.com/> |
-| Wednesday | Designed an S3 Receipts Bucket and least-privilege EC2 IAM Role; separated file storage from metadata. | 15/07/2026 | 15/07/2026 | <https://000069.awsstudygroup.com/> <br> <https://000048.awsstudygroup.com/> |
-| Thursday | Added Session Manager, CloudWatch, SNS, AWS Budgets, secret-management guidance, and resource tagging. | 16/07/2026 | 16/07/2026 | <https://000058.awsstudygroup.com/> <br> <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> |
-| Friday | Completed the current architecture diagram and proposed a future CloudFront, Route 53, ACM, WAF, ALB, and CI/CD expansion. | 17/07/2026 | 17/07/2026 | [../../2-proposal/](../../2-proposal/) <br> <https://000094.awsstudygroup.com/> <br> <https://000026.awsstudygroup.com/> <br> <https://000017.awsstudygroup.com/> |
+| Monday | Drew the request flow: browser -> Nginx -> Express -> MongoDB Atlas.<br>Marked where receipt files would flow separately from the business data.<br>Nothing built yet, just diagramming this week. | 13/07/2026 | 13/07/2026 | [../../2-proposal/](../../2-proposal/) <br> <https://000112.awsstudygroup.com/> |
+| Tuesday | Sketched VPC + public subnet + IGW + Security Group + EC2.<br>Picked one EC2 for now, budget doesn't allow more.<br>Elastic IP so the address doesn't change if the instance restarts. | 14/07/2026 | 14/07/2026 | <https://000003.awsstudygroup.com/> <br> <https://000004.awsstudygroup.com/> |
+| Wednesday | Planned S3 Receipts Bucket with Block Public Access on.<br>IAM Role for EC2 scoped to just that bucket, nothing broader.<br>DB stores only the object key/URL, not the actual file. | 15/07/2026 | 15/07/2026 | <https://000069.awsstudygroup.com/> <br> <https://000048.awsstudygroup.com/> |
+| Thursday | Added Session Manager instead of opening SSH publicly.<br>Listed the CloudWatch metrics/alarms I'll need for the backend.<br>Rough tagging idea so cost tracking is at least possible later. | 16/07/2026 | 16/07/2026 | <https://000058.awsstudygroup.com/> <br> <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> |
+| Friday | Finalized the diagram for this phase (single EC2).<br>Wrote down a "later" list: CloudFront, Route 53, ACM, WAF, ALB, CI/CD.<br>Not doing any of that now, just noting it for the proposal doc. | 17/07/2026 | 17/07/2026 | [../../2-proposal/](../../2-proposal/) <br> <https://000094.awsstudygroup.com/> <br> <https://000026.awsstudygroup.com/> <br> <https://000017.awsstudygroup.com/> |
 
 ### Week 9 Achievements:
 

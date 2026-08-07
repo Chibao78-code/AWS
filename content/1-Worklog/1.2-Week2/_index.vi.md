@@ -16,11 +16,11 @@ pre: " <b> 1.2. </b> "
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | Nghiên cứu cách lập kế hoạch CIDR, Availability Zone và thiết kế public/private subnet. | 25/05/2026 | 25/05/2026 | <https://000003.awsstudygroup.com/> |
-| Thứ Ba | Tạo VPC, subnet, route table và Internet Gateway; theo dõi đường đi của gói tin. | 26/05/2026 | 26/05/2026 | <https://000003.awsstudygroup.com/> |
-| Thứ Tư | So sánh Security Group có trạng thái với NACL không trạng thái và kiểm thử các rule vào/ra. | 27/05/2026 | 27/05/2026 | <https://000003.awsstudygroup.com/> |
-| Thứ Năm | Nghiên cứu NAT Gateway, Elastic IP, VPC Flow Logs và truy cập Internet từ private subnet. | 28/05/2026 | 28/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000074.awsstudygroup.com/> |
-| Thứ Sáu | Khởi tạo EC2 thử nghiệm, kiểm tra route và kết nối, sau đó dọn tài nguyên bài lab. | 29/05/2026 | 29/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000004.awsstudygroup.com/> |
+| Thứ Hai | Đọc về cách chia CIDR, Availability Zone.<br>Phác layout subnet ra giấy, một khối public, một khối private.<br>Cố giữ số liệu đơn giản, không tính toán quá phức tạp. | 25/05/2026 | 25/05/2026 | <https://000003.awsstudygroup.com/> |
+| Thứ Ba | Tạo VPC, subnet, route table, IGW.<br>Gắn IGW vào VPC, set route mặc định cho public subnet.<br>Vẽ lại đường đi gói tin ra giấy để kiểm tra route có hợp lý không. | 26/05/2026 | 26/05/2026 | <https://000003.awsstudygroup.com/> |
+| Thứ Tư | So sánh Security Group với NACL, thử vài rule.<br>SG dễ hơn vì có trạng thái, traffic trả về tự động được cho qua.<br>NACL phải khai rõ cả hai chiều, làm sai vài lần mới đúng. | 27/05/2026 | 27/05/2026 | <https://000003.awsstudygroup.com/> |
+| Thứ Năm | Đọc về NAT Gateway, Elastic IP, Flow Logs.<br>Tạo NAT Gateway trong public subnet, gắn EIP vào.<br>Sửa route table của private subnet, bật Flow Logs để xem traffic. | 28/05/2026 | 28/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000074.awsstudygroup.com/> |
+| Thứ Sáu | Khởi tạo EC2 test trong private subnet.<br>Xác nhận ra Internet được qua NAT nhưng không ai truy cập trực tiếp vào được.<br>Terminate ngay sau đó, xóa cả NAT Gateway và EIP, sợ để quên bị tính phí. | 29/05/2026 | 29/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000004.awsstudygroup.com/> |
 
 ### Kết quả đạt được trong tuần 2:
 

@@ -16,11 +16,11 @@ pre: " <b> 1.11. </b> "
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | Rà soát quyền triển khai, parameter, Region, tên tài nguyên, tính duy nhất của bucket và yêu cầu bảo vệ secret. | 27/07/2026 | 27/07/2026 | [../../5-workshop/5.2-prerequiste/](../../5-workshop/5.2-prerequiste/) <br> <https://000037.awsstudygroup.com/> |
-| Thứ Ba | Tạo, theo dõi CloudFormation stack và kiểm tra VPC, subnet, route, Security Group, EC2, IAM Role cùng output. | 28/07/2026 | 28/07/2026 | <https://000037.awsstudygroup.com/> |
-| Thứ Tư | Kết nối bằng Session Manager, clone repository, cấu hình backend, build API và chạy bằng PM2. | 29/07/2026 | 29/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://000058.awsstudygroup.com/> |
-| Thứ Năm | Build frontend React/Vite và cấu hình Nginx phục vụ SPA, proxy `/api/` tới `127.0.0.1:5000`. | 30/07/2026 | 30/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
-| Thứ Sáu | Kiểm tra kết nối MongoDB Atlas, quyền IAM của EC2 với S3 receipt bucket, trạng thái PM2, Nginx và dữ liệu CloudWatch ban đầu. | 31/07/2026 | 31/07/2026 | <https://www.mongodb.com/docs/atlas/> <br> <https://000048.awsstudygroup.com/> <br> <https://000008.awsstudygroup.com/> |
+| Thứ Hai | Kiểm tra lại quyền IAM trước khi deploy bất cứ thứ gì.<br>Xác nhận tên bucket S3 mình chọn thật sự chưa ai dùng.<br>Đảm bảo không có secret nào truyền vào dạng CloudFormation parameter thô. | 27/07/2026 | 27/07/2026 | [../../5-workshop/5.2-prerequiste/](../../5-workshop/5.2-prerequiste/) <br> <https://000037.awsstudygroup.com/> |
+| Thứ Ba | Chạy `create-stack`, canh tab events xem có lỗi không.<br>Bị rollback một lần do gõ sai CIDR subnet, sửa lại rồi chạy lại.<br>Check output có đủ public IP của EC2 và tên bucket. | 28/07/2026 | 28/07/2026 | <https://000037.awsstudygroup.com/> |
+| Thứ Tư | Mở session bằng Session Manager, clone repo vào instance.<br>Điền giá trị `.env` thật (MongoDB URI, JWT secret).<br>Build API, chạy bằng PM2, xem `pm2 logs` có lỗi gì không. | 29/07/2026 | 29/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://000058.awsstudygroup.com/> |
+| Thứ Năm | Build frontend, copy file dist vào web root của Nginx.<br>Thêm fallback SPA để refresh route không bị 404.<br>Cấu hình proxy `/api/` trỏ về `127.0.0.1:5000`. | 30/07/2026 | 30/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
+| Thứ Sáu | Xem log backend xác nhận kết nối MongoDB Atlas thành công.<br>Upload một biên lai test để chắc IAM Role thật sự hoạt động với S3.<br>`pm2 status` ổn, CloudWatch cũng đã bắt đầu có dữ liệu. | 31/07/2026 | 31/07/2026 | <https://www.mongodb.com/docs/atlas/> <br> <https://000048.awsstudygroup.com/> <br> <https://000008.awsstudygroup.com/> |
 
 ### Kết quả đạt được trong tuần 11:
 

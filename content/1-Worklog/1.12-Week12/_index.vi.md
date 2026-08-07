@@ -16,11 +16,11 @@ pre: " <b> 1.12. </b> "
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | Kiểm tra CloudFormation output, trạng thái EC2, rule Security Group, IAM Role, Session Manager và các cổng cần lắng nghe. | 03/08/2026 | 03/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://000037.awsstudygroup.com/> |
-| Thứ Ba | Kiểm tra backend health, log PM2, cấu hình Nginx, refresh route SPA và luồng frontend tới API. | 04/08/2026 | 04/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
-| Thứ Tư | Kiểm thử đăng nhập, tạo nhóm, khoản chi, số dư, settlement, upload/đọc biên lai, notification và complaint. | 05/08/2026 | 05/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> [../../2-proposal/](../../2-proposal/) |
-| Thứ Năm | Rà soát log/metric CloudWatch, cảnh báo SNS, AWS Budgets, phạm vi IAM/Security Group và các tình huống xử lý lỗi. | 06/08/2026 | 06/08/2026 | <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> |
-| Thứ Sáu | Hoàn thiện tài liệu Anh/Việt, sao lưu bằng chứng cần thiết, dọn tài nguyên lab an toàn và rà soát báo cáo. | 07/08/2026 | 07/08/2026 | [../../5-workshop/5.5-cleanup/](../../5-workshop/5.5-cleanup/) <br> <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Hai | Đối chiếu output của stack với EC2 đang chạy thật.<br>Xác nhận Security Group chỉ mở đúng cổng cần thiết, không hơn.<br>Session Manager vẫn hoạt động tốt, không cần public SSH key. | 03/08/2026 | 03/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://000037.awsstudygroup.com/> |
+| Thứ Ba | Gọi thử endpoint health nhỏ, API phản hồi ổn.<br>Lướt qua log PM2 xem có gì bất thường lúc khởi động không, sạch.<br>Refresh một route sâu của SPA trên trình duyệt để chắc fallback Nginx hoạt động. | 04/08/2026 | 04/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
+| Thứ Tư | Chạy full hành trình bằng tài khoản test: đăng nhập, tạo nhóm, thêm khoản chi.<br>Số dư và settlement khớp với con số mình đã tính trước trên giấy.<br>Upload/tải lại một biên lai, bắn thử một notification và một complaint để kiểm tra cả hai. | 05/08/2026 | 05/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Năm | So metric CloudWatch với mức CPU/network dự kiến thô ban đầu.<br>Gửi thử một alert SNS, nhận được email nên phần này ổn.<br>Viết bảng ngắn triệu chứng thường gặp -> nguyên nhân khả năng cao cho báo cáo. | 06/08/2026 | 06/08/2026 | <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> |
+| Thứ Sáu | Chụp ảnh minh chứng cuối cho bản chạy thật ở cả hai ngôn ngữ.<br>Sao lưu template CloudFormation và ghi chú cấu hình của mình.<br>Xóa stack + EIP/S3 test còn sót, sau đó đọc lại toàn bộ báo cáo. | 07/08/2026 | 07/08/2026 | [../../5-workshop/5.5-cleanup/](../../5-workshop/5.5-cleanup/) <br> <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được trong tuần 12:
 

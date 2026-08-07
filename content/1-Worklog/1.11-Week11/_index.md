@@ -16,11 +16,11 @@ pre: " <b> 1.11. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | --- | --- | --- | --- |
-| Monday | Reviewed deployment permissions, parameters, Region, resource names, bucket uniqueness, and secret-handling requirements. | 27/07/2026 | 27/07/2026 | [../../5-workshop/5.2-prerequiste/](../../5-workshop/5.2-prerequiste/) <br> <https://000037.awsstudygroup.com/> |
-| Tuesday | Created and monitored the CloudFormation stack; verified VPC, subnet, routes, Security Group, EC2, IAM Role, and outputs. | 28/07/2026 | 28/07/2026 | <https://000037.awsstudygroup.com/> |
-| Wednesday | Connected through Session Manager, cloned the repository, configured backend variables, built the API, and started it with PM2. | 29/07/2026 | 29/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://000058.awsstudygroup.com/> |
-| Thursday | Built the React/Vite frontend and configured Nginx to serve the SPA and proxy `/api/` to `127.0.0.1:5000`. | 30/07/2026 | 30/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
-| Friday | Verified MongoDB Atlas connectivity, EC2 IAM access to the S3 receipt bucket, PM2 status, Nginx, and initial CloudWatch data. | 31/07/2026 | 31/07/2026 | <https://www.mongodb.com/docs/atlas/> <br> <https://000048.awsstudygroup.com/> <br> <https://000008.awsstudygroup.com/> |
+| Monday | Double checked IAM permissions before deploying anything.<br>Confirmed the S3 bucket name I picked was actually available.<br>Made sure no secret was going in as a plain CloudFormation parameter. | 27/07/2026 | 27/07/2026 | [../../5-workshop/5.2-prerequiste/](../../5-workshop/5.2-prerequiste/) <br> <https://000037.awsstudygroup.com/> |
+| Tuesday | Ran `create-stack`, watched the events tab for failures.<br>One rollback happened because of a typo in a subnet CIDR, fixed and reran.<br>Checked outputs had the EC2 public IP and bucket name. | 28/07/2026 | 28/07/2026 | <https://000037.awsstudygroup.com/> |
+| Wednesday | Opened a Session Manager session, cloned the repo onto the instance.<br>Filled in the real `.env` values (MongoDB URI, JWT secret).<br>Built the API, ran it with PM2, checked `pm2 logs` for errors. | 29/07/2026 | 29/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://000058.awsstudygroup.com/> |
+| Thursday | Built the frontend, copied dist files to Nginx's web root.<br>Added the SPA fallback so refreshing a route doesn't 404.<br>Set up the `/api/` proxy block pointing to `127.0.0.1:5000`. | 30/07/2026 | 30/07/2026 | [../../5-workshop/5.3-deploycode-webserver/](../../5-workshop/5.3-deploycode-webserver/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
+| Friday | Checked backend logs for a successful MongoDB Atlas connection.<br>Uploaded a test receipt to confirm the IAM Role actually works against S3.<br>`pm2 status` looked healthy, and CloudWatch started showing data. | 31/07/2026 | 31/07/2026 | <https://www.mongodb.com/docs/atlas/> <br> <https://000048.awsstudygroup.com/> <br> <https://000008.awsstudygroup.com/> |
 
 ### Week 11 Achievements:
 

@@ -16,11 +16,11 @@ pre: " <b> 1.10. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | --- | --- | --- | --- |
-| Monday | Reviewed settlement confirmation permissions and ensured that only the appropriate party can confirm a payment. | 20/07/2026 | 20/07/2026 | <https://expressjs.com/en/guide/using-middleware.html> <br> [../../2-proposal/](../../2-proposal/) |
-| Tuesday | Refactored notification preferences and reviewed dependencies between notification and business modules. | 21/07/2026 | 21/07/2026 | <https://expressjs.com/en/guide/routing.html> <br> [../../2-proposal/](../../2-proposal/) |
-| Wednesday | Added and tested subscription-related group-member limits and consistent API error responses. | 22/07/2026 | 22/07/2026 | <https://expressjs.com/en/guide/error-handling.html> <br> [../../2-proposal/](../../2-proposal/) |
-| Thursday | Designed CloudFormation resources for VPC, subnet, routes, Security Group, EC2, IAM Role, S3, and monitoring. | 23/07/2026 | 23/07/2026 | <https://000037.awsstudygroup.com/> |
-| Friday | Prepared environment-variable templates, Nginx/PM2 plans, MongoDB Atlas access, and deployment acceptance criteria. | 24/07/2026 | 24/07/2026 | [../../5-workshop/5.2-prerequiste/](../../5-workshop/5.2-prerequiste/) <br> <https://000096.awsstudygroup.com/> |
+| Monday | Re-checked settlement confirm permission.<br>Made sure a random member can't confirm someone else's settlement.<br>Added a test case for exactly that, it was passing but wanted proof. | 20/07/2026 | 20/07/2026 | <https://expressjs.com/en/guide/using-middleware.html> <br> [../../2-proposal/](../../2-proposal/) |
+| Tuesday | Pulled notification preference logic into its own service.<br>It was too tangled with expense/settlement code before.<br>Traced which events currently write a notification, some were missing. | 21/07/2026 | 21/07/2026 | <https://expressjs.com/en/guide/routing.html> <br> [../../2-proposal/](../../2-proposal/) |
+| Wednesday | Added 5-member cap for Free Plan groups.<br>Tested adding a 6th member, got the expected error.<br>Cleaned up error response format, was inconsistent across endpoints before. | 22/07/2026 | 22/07/2026 | <https://expressjs.com/en/guide/error-handling.html> <br> [../../2-proposal/](../../2-proposal/) |
+| Thursday | Wrote the CloudFormation template: VPC, subnet, route, SG, EC2, IAM Role, S3.<br>Added CloudWatch alarm resources into the same template.<br>Ran into a circular dependency issue once, reordered resources to fix it. | 23/07/2026 | 23/07/2026 | <https://000037.awsstudygroup.com/> |
+| Friday | Drafted `.env.example` with all backend vars the EC2 will need.<br>Planned Nginx config and PM2 process name on paper first.<br>Wrote a short acceptance checklist for what "deployed" actually means. | 24/07/2026 | 24/07/2026 | [../../5-workshop/5.2-prerequiste/](../../5-workshop/5.2-prerequiste/) <br> <https://000096.awsstudygroup.com/> |
 
 ### Week 10 Achievements:
 

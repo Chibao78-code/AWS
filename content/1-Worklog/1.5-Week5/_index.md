@@ -16,11 +16,11 @@ pre: " <b> 1.5. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | --- | --- | --- | --- |
-| Monday | Analyzed the shared-expense problem, identified member and administrator roles, and defined the minimum feature set. | 15/06/2026 | 15/06/2026 | [../../2-proposal/](../../2-proposal/) |
-| Tuesday | Designed use cases for registration, groups, members, expenses, balances, settlements, receipts, and notifications. | 16/06/2026 | 16/06/2026 | [../../2-proposal/](../../2-proposal/) |
-| Wednesday | Reviewed React/TypeScript/Vite, Node.js/Express/TypeScript, and MongoDB Atlas; organized the application structure. | 17/06/2026 | 17/06/2026 | <https://react.dev/learn> <br> <https://vite.dev/guide/> <br> <https://expressjs.com/en/guide/routing.html> <br> <https://www.mongodb.com/docs/atlas/> |
-| Thursday | Designed the initial MongoDB collections and relationships for users, groups, expenses, and settlements. | 18/06/2026 | 18/06/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
-| Friday | Set up the repository workflow, environment-file conventions, coding tasks, and an initial end-to-end development plan. | 19/06/2026 | 19/06/2026 | <https://git-scm.com/docs> <br> [../../2-proposal/](../../2-proposal/) |
+| Monday | Wrote down the shared-expense problem in my own words.<br>Roughed out member vs admin roles, kept feature list small on purpose.<br>Didn't want to over-scope this in week 1 of the project. | 15/06/2026 | 15/06/2026 | [../../2-proposal/](../../2-proposal/) |
+| Tuesday | Drafted use cases: register, group, member, expense, balance, settlement, receipt, notification.<br>Drew a rough sequence diagram for register -> settlement flow.<br>Some edge cases (empty group, one member) I left as TODO for now. | 16/06/2026 | 16/06/2026 | [../../2-proposal/](../../2-proposal/) |
+| Wednesday | Set up the folders for frontend (React/Vite/TS) and backend (Node/Express/TS).<br>Turned on strict mode in tsconfig, fixed the errors it complained about.<br>Tested the Vite dev proxy against one dummy Express route, worked fine. | 17/06/2026 | 17/06/2026 | <https://react.dev/learn> <br> <https://vite.dev/guide/> <br> <https://expressjs.com/en/guide/routing.html> <br> <https://www.mongodb.com/docs/atlas/> |
+| Thursday | Sketched the first MongoDB schemas: user, group, expense, settlement.<br>Went back and forth on embed vs reference for group members, picked reference.<br>Added an index on group membership since that'll be queried a lot. | 18/06/2026 | 18/06/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
+| Friday | Set a branch naming convention, nothing fancy.<br>Made `.env.example` with fake values, added `.gitignore` entries.<br>Broke the 12-week plan into rough weekly code goals. | 19/06/2026 | 19/06/2026 | <https://git-scm.com/docs> <br> [../../2-proposal/](../../2-proposal/) |
 
 ### Week 5 Achievements:
 

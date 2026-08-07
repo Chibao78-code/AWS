@@ -16,11 +16,11 @@ pre: " <b> 1.1. </b> "
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | Tham gia chương trình, đọc yêu cầu thực tập và tổ chức kế hoạch học tập trong 12 tuần. | 18/05/2026 | 18/05/2026 | <https://youtu.be/AQlsd0nWdZk?si=QmmvhYeTisGPtctd> |
-| Thứ Ba | Nghiên cứu cloud, AWS Region, Availability Zone, edge location và các nhóm dịch vụ chính. | 19/05/2026 | 19/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
-| Thứ Tư | Tìm hiểu cách tạo tài khoản AWS, bật MFA và các khái niệm IAM user, group, role, policy. | 20/05/2026 | 20/05/2026 | <https://000001.awsstudygroup.com/> <br> <https://000002.awsstudygroup.com/> |
-| Thứ Năm | Cài đặt AWS CLI, chọn Region mặc định và thực hành lệnh cơ bản mà không làm lộ thông tin xác thực. | 21/05/2026 | 21/05/2026 | <https://000011.awsstudygroup.com/> |
-| Thứ Sáu | Nghiên cứu AWS Budgets, Cost Explorer, giới hạn Free Tier, gói hỗ trợ và quy trình dọn tài nguyên. | 22/05/2026 | 22/05/2026 | <https://000007.awsstudygroup.com/> <br> <https://000009.awsstudygroup.com/> |
+| Thứ Hai | Tham gia chương trình, đọc lại yêu cầu thực tập.<br>Xem video hướng dẫn, ghi chú tiêu chí đánh giá.<br>Phác kế hoạch 12 tuần ra giấy trước, sau đó gõ lại thành file. | 18/05/2026 | 18/05/2026 | <https://youtu.be/AQlsd0nWdZk?si=QmmvhYeTisGPtctd> |
+| Thứ Ba | Đọc về cloud, Region, AZ, edge location.<br>Ban đầu hơi lộn giữa Region và AZ, đọc lại tài liệu 2 lần mới rõ.<br>Ghi chú lại nhóm dịch vụ nào có khả năng cần dùng cho dự án sau này. | 19/05/2026 | 19/05/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Tư | Làm theo bước tạo tài khoản, bật MFA trên điện thoại.<br>Tạo IAM user thay vì dùng root, gắn policy cơ bản.<br>Thử cả inline policy và group policy để xem khác nhau chỗ nào. | 20/05/2026 | 20/05/2026 | <https://000001.awsstudygroup.com/> <br> <https://000002.awsstudygroup.com/> |
+| Thứ Năm | Cài AWS CLI, chọn Region mặc định (ap-southeast-1).<br>Tạo named profile để không hardcode access key.<br>Chạy `aws sts get-caller-identity` kiểm tra, rồi thử liệt kê vài bucket. | 21/05/2026 | 21/05/2026 | <https://000011.awsstudygroup.com/> |
+| Thứ Sáu | Đọc về Budgets, Cost Explorer, giới hạn Free Tier.<br>Set cảnh báo ngân sách ở ngưỡng nhỏ để test thử.<br>Kiểm tra Free Tier hiện tại vẫn còn xa mới tới giới hạn. | 22/05/2026 | 22/05/2026 | <https://000007.awsstudygroup.com/> <br> <https://000009.awsstudygroup.com/> |
 
 ### Kết quả đạt được trong tuần 1:
 

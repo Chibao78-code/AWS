@@ -16,11 +16,11 @@ pre: " <b> 1.6. </b> "
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | Xây dựng nền móng backend, kết nối database, xử lý lỗi chung và kiểm tra biến môi trường. | 22/06/2026 | 22/06/2026 | <https://expressjs.com/en/guide/error-handling.html> <br> <https://www.mongodb.com/docs/atlas/> |
-| Thứ Ba | Triển khai đăng ký, đăng nhập, xác thực bằng JWT và middleware bảo vệ route. | 23/06/2026 | 23/06/2026 | <https://datatracker.ietf.org/doc/html/rfc7519> <br> <https://expressjs.com/en/guide/using-middleware.html> |
-| Thứ Tư | Phát triển chức năng tạo nhóm, thành viên, vai trò cơ bản và kiểm tra quyền chỉnh sửa. | 24/06/2026 | 24/06/2026 | <https://expressjs.com/en/guide/routing.html> <br> [../../2-proposal/](../../2-proposal/) |
-| Thứ Năm | Triển khai khoản chi gồm người trả, người tham gia, số tiền, danh mục và thông tin chia tiền. | 25/06/2026 | 25/06/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
-| Thứ Sáu | Kết nối các màn hình frontend đầu tiên với API, kiểm thử lỗi thường gặp và rà soát tính nhất quán dữ liệu. | 26/06/2026 | 26/06/2026 | <https://react.dev/learn> <br> <https://expressjs.com/en/guide/routing.html> |
+| Thứ Hai | Setup khung Express, kết nối DB.<br>Dùng một middleware xử lý lỗi chung thay vì try/catch lung tung.<br>App giờ báo lỗi ngay khi thiếu env var, tránh được một bug ngớ ngẩn. | 22/06/2026 | 22/06/2026 | <https://expressjs.com/en/guide/error-handling.html> <br> <https://www.mongodb.com/docs/atlas/> |
+| Thứ Ba | Làm đăng ký/đăng nhập, xác thực JWT.<br>Hash password, thêm thời hạn hết hiệu lực cho token.<br>Viết middleware chặn request thiếu/sai token, test bằng Postman. | 23/06/2026 | 23/06/2026 | <https://datatracker.ietf.org/doc/html/rfc7519> <br> <https://expressjs.com/en/guide/using-middleware.html> |
+| Thứ Tư | Tạo nhóm và thêm thành viên.<br>Người tạo tự động thành admin.<br>Thêm kiểm tra chỉ admin sửa được cấu hình nhóm, quên bước này lúc đầu nên phải fix lại. | 24/06/2026 | 24/06/2026 | <https://expressjs.com/en/guide/routing.html> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Năm | Khoản chi: người trả, người tham gia, số tiền, danh mục, chia tiền.<br>Kiểm tra số tiền > 0 và người tham gia phải thuộc nhóm.<br>Thêm trường danh mục chủ yếu để lọc sau này, giờ chưa dùng tới. | 25/06/2026 | 25/06/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Sáu | Nối màn hình đăng nhập và nhóm với API.<br>Test case sai password, trùng tên nhóm.<br>Đối chiếu lại response API với dữ liệu thật trong MongoDB Atlas. | 26/06/2026 | 26/06/2026 | <https://react.dev/learn> <br> <https://expressjs.com/en/guide/routing.html> |
 
 ### Kết quả đạt được trong tuần 6:
 

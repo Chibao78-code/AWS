@@ -16,11 +16,11 @@ pre: " <b> 1.12. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | --- | --- | --- | --- |
-| Monday | Verified CloudFormation outputs, EC2 status, Security Group rules, IAM Role, Session Manager, and required listeners. | 03/08/2026 | 03/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://000037.awsstudygroup.com/> |
-| Tuesday | Tested backend health, PM2 logs, Nginx configuration, SPA route refresh, and the frontend-to-API flow. | 04/08/2026 | 04/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
-| Wednesday | Tested sign-in, group creation, expenses, balances, settlements, receipt upload/retrieval, notifications, and complaints. | 05/08/2026 | 05/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> [../../2-proposal/](../../2-proposal/) |
-| Thursday | Reviewed CloudWatch logs/metrics, SNS alerts, AWS Budgets, IAM/Security Group scope, and common troubleshooting scenarios. | 06/08/2026 | 06/08/2026 | <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> |
-| Friday | Finalized English/Vietnamese documentation, backed up required evidence, removed lab resources safely, and reviewed the report. | 07/08/2026 | 07/08/2026 | [../../5-workshop/5.5-cleanup/](../../5-workshop/5.5-cleanup/) <br> <https://cloudjourney.awsstudygroup.com/> |
+| Monday | Cross-checked stack outputs against the running EC2.<br>Confirmed Security Group only had the ports it should.<br>Session Manager still worked fine, no public SSH key needed. | 03/08/2026 | 03/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://000037.awsstudygroup.com/> |
+| Tuesday | Hit a small health endpoint, API responded fine.<br>Scanned PM2 logs for anything weird at startup, looked clean.<br>Refreshed a deep SPA route in the browser to make sure Nginx fallback works. | 04/08/2026 | 04/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> <https://nginx.org/en/docs/> <br> <https://pm2.keymetrics.io/docs/usage/quick-start/> |
+| Wednesday | Ran the full user journey with a test account: login, group, expense.<br>Balance and settlement numbers matched what I expected on paper.<br>Uploaded/retrieved a receipt, triggered a notification and a complaint to check both. | 05/08/2026 | 05/08/2026 | [../../5-workshop/5.4-test/](../../5-workshop/5.4-test/) <br> [../../2-proposal/](../../2-proposal/) |
+| Thursday | Checked CloudWatch metrics against rough CPU/network baselines.<br>Sent a test SNS alert, got it in email so that part works.<br>Wrote a short table of common symptoms -> likely cause for the report. | 06/08/2026 | 06/08/2026 | <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> |
+| Friday | Took final screenshots of the working site in both languages.<br>Backed up the CloudFormation template and my config notes.<br>Deleted the stack + leftover EIP/S3 test objects, then proofread the whole report. | 07/08/2026 | 07/08/2026 | [../../5-workshop/5.5-cleanup/](../../5-workshop/5.5-cleanup/) <br> <https://cloudjourney.awsstudygroup.com/> |
 
 ### Week 12 Achievements:
 

@@ -16,11 +16,11 @@ pre: " <b> 1.4. </b> "
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | Nghiên cứu S3 object, storage class, versioning, lifecycle rule, bucket policy và Block Public Access. | 08/06/2026 | 08/06/2026 | <https://000057.awsstudygroup.com/> <br> <https://000069.awsstudygroup.com/> |
-| Thứ Ba | So sánh cơ sở dữ liệu quan hệ và document; xem xét trường hợp dùng Amazon RDS, DynamoDB và MongoDB Atlas. | 09/06/2026 | 09/06/2026 | <https://000005.awsstudygroup.com/> <br> <https://000060.awsstudygroup.com/> |
-| Thứ Tư | Nghiên cứu cách IAM đánh giá policy, least privilege, EC2 role, KMS và lựa chọn quản lý secret. | 10/06/2026 | 10/06/2026 | <https://000044.awsstudygroup.com/> <br> <https://000033.awsstudygroup.com/> <br> <https://000096.awsstudygroup.com/> |
-| Thứ Năm | Tìm hiểu metric/log CloudWatch, cảnh báo SNS, AWS Budgets, tagging, backup và khôi phục. | 11/06/2026 | 11/06/2026 | <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> <br> <https://000013.awsstudygroup.com/> |
-| Thứ Sáu | Tổng hợp các vấn đề frontend, backend, database, storage, bảo mật, giám sát và chi phí của web application trên cloud. | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ Hai | Đọc về S3 object, storage class, versioning, lifecycle rule.<br>Bật versioning trên bucket test, upload/ghi đè file để xem nó hoạt động.<br>Set lifecycle rule chuyển object cũ sang class rẻ hơn, chủ yếu để thực hành. | 08/06/2026 | 08/06/2026 | <https://000057.awsstudygroup.com/> <br> <https://000069.awsstudygroup.com/> |
+| Thứ Ba | So sánh RDS, DynamoDB, MongoDB Atlas.<br>Nghiêng về MongoDB Atlas vì thấy mô hình dữ liệu linh hoạt hơn.<br>Chưa chắc 100%, có thể sẽ xem lại quyết định này sau. | 09/06/2026 | 09/06/2026 | <https://000005.awsstudygroup.com/> <br> <https://000060.awsstudygroup.com/> |
+| Thứ Tư | Đọc về cách IAM đánh giá policy, least privilege.<br>Lần theo ví dụ: explicit deny luôn thắng, phần này giờ rõ rồi.<br>Xem qua KMS, cách secret có thể lưu thay cho file env thông thường. | 10/06/2026 | 10/06/2026 | <https://000044.awsstudygroup.com/> <br> <https://000033.awsstudygroup.com/> <br> <https://000096.awsstudygroup.com/> |
+| Thứ Năm | Tìm hiểu CloudWatch, SNS, Budgets, tagging.<br>Set alarm cơ bản -> SNS gửi thông báo test, nhận được email.<br>Ghi ý tưởng đặt tên tag đơn giản (tên project + env). | 11/06/2026 | 11/06/2026 | <https://000008.awsstudygroup.com/> <br> <https://000077.awsstudygroup.com/> <br> <https://000007.awsstudygroup.com/> <br> <https://000013.awsstudygroup.com/> |
+| Thứ Sáu | Gom hết những gì học trong tuần thành một checklist.<br>Frontend, backend, database, storage, bảo mật, giám sát, chi phí - mỗi dòng một ý.<br>Vẫn còn vài câu hỏi mở, sẽ giải quyết dần khi bắt đầu code. | 12/06/2026 | 12/06/2026 | <https://cloudjourney.awsstudygroup.com/> |
 
 ### Kết quả đạt được trong tuần 4:
 

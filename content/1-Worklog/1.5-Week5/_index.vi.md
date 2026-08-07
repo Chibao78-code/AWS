@@ -16,11 +16,11 @@ pre: " <b> 1.5. </b> "
 
 | Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 | --- | --- | --- | --- | --- |
-| Thứ Hai | Phân tích bài toán chi tiêu chung, xác định vai trò thành viên/quản trị viên và chức năng tối thiểu. | 15/06/2026 | 15/06/2026 | [../../2-proposal/](../../2-proposal/) |
-| Thứ Ba | Thiết kế use case cho đăng ký, nhóm, thành viên, khoản chi, số dư, settlement, biên lai và thông báo. | 16/06/2026 | 16/06/2026 | [../../2-proposal/](../../2-proposal/) |
-| Thứ Tư | Rà soát React/TypeScript/Vite, Node.js/Express/TypeScript và MongoDB Atlas; tổ chức cấu trúc ứng dụng. | 17/06/2026 | 17/06/2026 | <https://react.dev/learn> <br> <https://vite.dev/guide/> <br> <https://expressjs.com/en/guide/routing.html> <br> <https://www.mongodb.com/docs/atlas/> |
-| Thứ Năm | Thiết kế collection và quan hệ MongoDB ban đầu cho user, group, expense và settlement. | 18/06/2026 | 18/06/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
-| Thứ Sáu | Thiết lập quy trình repository, quy ước file môi trường, phân chia công việc và kế hoạch phát triển xuyên suốt. | 19/06/2026 | 19/06/2026 | <https://git-scm.com/docs> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Hai | Viết ra bài toán chi tiêu chung theo cách hiểu của mình.<br>Phác vai trò thành viên/admin, cố ý giữ list chức năng nhỏ.<br>Không muốn ôm quá nhiều việc ngay tuần đầu dự án. | 15/06/2026 | 15/06/2026 | [../../2-proposal/](../../2-proposal/) |
+| Thứ Ba | Phác use case: đăng ký, nhóm, thành viên, khoản chi, số dư, settlement, biên lai, thông báo.<br>Vẽ nháp sequence diagram cho luồng đăng ký -> settlement.<br>Vài case biên (nhóm rỗng, 1 thành viên) tạm để TODO xử lý sau. | 16/06/2026 | 16/06/2026 | [../../2-proposal/](../../2-proposal/) |
+| Thứ Tư | Setup folder cho frontend (React/Vite/TS) và backend (Node/Express/TS).<br>Bật strict mode trong tsconfig, sửa hết lỗi nó báo.<br>Test proxy dev của Vite với một route Express giả, chạy được. | 17/06/2026 | 17/06/2026 | <https://react.dev/learn> <br> <https://vite.dev/guide/> <br> <https://expressjs.com/en/guide/routing.html> <br> <https://www.mongodb.com/docs/atlas/> |
+| Thứ Năm | Phác schema MongoDB đầu tiên: user, group, expense, settlement.<br>Đắn đo giữa embed và reference cho thành viên nhóm, chọn reference.<br>Thêm index cho trường thành viên nhóm vì sẽ query nhiều. | 18/06/2026 | 18/06/2026 | <https://www.mongodb.com/docs/manual/data-modeling/> <br> [../../2-proposal/](../../2-proposal/) |
+| Thứ Sáu | Đặt quy ước tên branch, đơn giản thôi không cầu kỳ.<br>Tạo `.env.example` với giá trị giả, thêm dòng vào `.gitignore`.<br>Chia kế hoạch 12 tuần thành mục tiêu code từng tuần, còn khá thô. | 19/06/2026 | 19/06/2026 | <https://git-scm.com/docs> <br> [../../2-proposal/](../../2-proposal/) |
 
 ### Kết quả đạt được trong tuần 5:
 

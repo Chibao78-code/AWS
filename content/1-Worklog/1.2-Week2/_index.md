@@ -16,11 +16,11 @@ pre: " <b> 1.2. </b> "
 
 | Day | Tasks | Start Date | Completion Date | Reference |
 | --- | --- | --- | --- | --- |
-| Monday | Studied VPC CIDR planning, Availability Zones, and public/private subnet design. | 25/05/2026 | 25/05/2026 | <https://000003.awsstudygroup.com/> |
-| Tuesday | Created a VPC, subnets, route tables, and an Internet Gateway; reviewed packet routes. | 26/05/2026 | 26/05/2026 | <https://000003.awsstudygroup.com/> |
-| Wednesday | Compared stateful Security Groups with stateless NACLs and tested inbound/outbound rules. | 27/05/2026 | 27/05/2026 | <https://000003.awsstudygroup.com/> |
-| Thursday | Studied NAT Gateway, Elastic IP, VPC Flow Logs, and private-subnet Internet access. | 28/05/2026 | 28/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000074.awsstudygroup.com/> |
-| Friday | Launched a test EC2 instance, verified routing and connectivity, and removed the lab resources. | 29/05/2026 | 29/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000004.awsstudygroup.com/> |
+| Monday | Read about CIDR planning and Availability Zones.<br>Sketched a subnet layout on paper, public block and private block.<br>Kept the math simple, didn't overthink the sizing. | 25/05/2026 | 25/05/2026 | <https://000003.awsstudygroup.com/> |
+| Tuesday | Created the VPC, subnets, route table, and IGW.<br>Attached IGW to the VPC, set the default route on the public subnet.<br>Traced a packet path on paper to double check the route made sense. | 26/05/2026 | 26/05/2026 | <https://000003.awsstudygroup.com/> |
+| Wednesday | Compared Security Group vs NACL, tested a few rules.<br>SG felt easier since it's stateful, return traffic just works.<br>NACL needed explicit rules both ways, took a couple of tries to get right. | 27/05/2026 | 27/05/2026 | <https://000003.awsstudygroup.com/> |
+| Thursday | Read about NAT Gateway, Elastic IP, Flow Logs.<br>Deployed a NAT Gateway in the public subnet, attached an EIP.<br>Updated the private route table, turned on Flow Logs to watch traffic. | 28/05/2026 | 28/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000074.awsstudygroup.com/> |
+| Friday | Launched a test EC2 in the private subnet.<br>Confirmed it could reach the internet through NAT but not be reached directly.<br>Terminated it and deleted the NAT Gateway + EIP right after, don't want idle charges. | 29/05/2026 | 29/05/2026 | <https://000003.awsstudygroup.com/> <br> <https://000004.awsstudygroup.com/> |
 
 ### Week 2 Achievements:
 
